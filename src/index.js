@@ -7,7 +7,7 @@ const producer = () => {
     client.subscribe('presence', function (err) {
       if (!err) {
         client.publish('presence', JSON.stringify(new Sensor()))
-        console.log("SERVER: MESSAGE PUBLISHED SUCCESSFULLY");
+        console.log(`SERVER: MESSAGE PUBLISHED SUCCESSFULLY [${new Date()}]`);
         client.end();
       }
       producer();
