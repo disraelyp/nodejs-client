@@ -6,7 +6,7 @@ const producer = () => {
   client.on('connect', function () {
     client.subscribe('presence', function (err) {
       if (!err) {
-        client.publish('/sensor', 'presence', JSON.stringify(new Sensor()))
+        client.publish('/sensor', JSON.stringify(new Sensor()))
         console.log(`SERVER: MESSAGE PUBLISHED SUCCESSFULLY [${new Date()}]`);
         client.end();
       }
