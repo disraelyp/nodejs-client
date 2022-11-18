@@ -12,7 +12,7 @@ Endpoint implementa una trama JSON con la siguiente estructura:
 
   <tr>
     <td>fechaGeneración</td>
-    <td>Number, milisegundos</td>
+    <td>Caracteres, EEE, dd MMM yyyy HH:mm:ss zzz</td>
   </tr>
 
   <tr>
