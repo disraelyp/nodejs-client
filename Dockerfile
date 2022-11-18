@@ -1,6 +1,14 @@
 FROM node:16-alpine
 
-RUN npm install
+ENV NODE_ENV=production
 
-CMD ["npm", "run", "start:subscribe"]
+WORKDIR /app
+
+COPY ["package.json", "package-lock.json*", "./"]
+
+RUN npm install --production
+
+COPY . .
+
+CMD ["npm", "run", "start"]
 

@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node ./src/index.js",
     "start:client": "cross-env NODE_ENV=CLIENT node ./src/index.js",
     "start:subscribe": "cross-env NODE_ENV=SUBSCRIBE node ./src/index.js"
   },
