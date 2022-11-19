@@ -10,7 +10,9 @@ const producer = () => {
         console.log(`SERVER: MESSAGE PUBLISHED SUCCESSFULLY [${new Date()}]`);
         client.end();
       }
-      producer();
+      setTimeout(
+        () => producer(), 5000
+      )
     });
   });
 }
